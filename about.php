@@ -865,7 +865,7 @@ $pageDesc  = "Découvrez le parcours, la formation et la personnalité de Roukay
         <div class="achievement-num" data-count="2">0</div>
         <div class="achievement-title">2 ans d'expérience professionnelle</div>
         <div class="achievement-desc">
-          Stage chez Sacim Digital Agency (mars–juin 2026) avec développement en PHP,
+          Stage chez Sacom Digital Agency (mars–juin 2026) avec développement en PHP,
           Laravel et Bootstrap.
         </div>
       </div>

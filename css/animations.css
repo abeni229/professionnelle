@@ -1,0 +1,591 @@
+/* ============================================================
+   PORTFOLIO — GAZALIOU ROUKAYATH
+   animations.css · Toutes les animations & effets visuels
+   ============================================================ */
+
+/* ============================================================
+   1. KEYFRAMES DE BASE
+   ============================================================ */
+
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Fade In vers le haut */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In vers le bas */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In depuis la gauche */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade In depuis la droite */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Zoom In */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Zoom In + fade */
+@keyframes zoomFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Curseur clignotant (typing) */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Point pulsé (hero badge "disponible") */
+@keyframes pulse-dot {
+  0%, 100% {
+    box-shadow: 0 0 4px #4ade80;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 12px #4ade80, 0 0 20px rgba(74,222,128,.4);
+    transform: scale(1.2);
+  }
+}
+
+/* Ligne de scroll hero */
+@keyframes scroll-line {
+  0%   { transform: scaleY(1); opacity: .6; }
+  50%  { transform: scaleY(0.5); opacity: 1; }
+  100% { transform: scaleY(1); opacity: .6; }
+}
+
+/* Flottement doux (cartes hero) */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* Rotation douce */
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Shake (erreur formulaire) */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
+
+/* Ondulation (bouton CTA) */
+@keyframes ripple {
+  0%   { transform: scale(0); opacity: 0.5; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+/* Gradient animé (fond sections) */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Entrée en cascade */
+@keyframes cascadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Ligne qui s'étend (underline nav) */
+@keyframes lineExpand {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* Bounce léger */
+@keyframes bounceSoft {
+  0%, 100% { transform: translateY(0); }
+  30%       { transform: translateY(-8px); }
+  60%       { transform: translateY(-3px); }
+}
+
+/* Apparition loader */
+@keyframes loaderSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Coche formulaire */
+@keyframes checkDraw {
+  from {
+    stroke-dashoffset: 50;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* ============================================================
+   2. CLASSES D'ANIMATION UTILITAIRES
+   ============================================================ */
+
+/* Déclenchement via JS : .animate → .animated */
+.animate {
+  opacity: 0;
+}
+
+.animated {
+  opacity: 1;
+}
+
+/* Fade In Up (scroll reveal) */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.anim-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade In Left */
+.anim-fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.anim-fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade In Right */
+.anim-fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.anim-fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom Fade In */
+.anim-zoom {
+  opacity: 0;
+  transform: scale(0.92) translateY(16px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.anim-zoom.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Cascade — délais automatiques pour enfants */
+.anim-cascade > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.anim-cascade.visible > *:nth-child(1)  { opacity: 1; transform: translateY(0); transition-delay: 0.05s; }
+.anim-cascade.visible > *:nth-child(2)  { opacity: 1; transform: translateY(0); transition-delay: 0.12s; }
+.anim-cascade.visible > *:nth-child(3)  { opacity: 1; transform: translateY(0); transition-delay: 0.19s; }
+.anim-cascade.visible > *:nth-child(4)  { opacity: 1; transform: translateY(0); transition-delay: 0.26s; }
+.anim-cascade.visible > *:nth-child(5)  { opacity: 1; transform: translateY(0); transition-delay: 0.33s; }
+.anim-cascade.visible > *:nth-child(6)  { opacity: 1; transform: translateY(0); transition-delay: 0.40s; }
+.anim-cascade.visible > *:nth-child(7)  { opacity: 1; transform: translateY(0); transition-delay: 0.47s; }
+.anim-cascade.visible > *:nth-child(8)  { opacity: 1; transform: translateY(0); transition-delay: 0.54s; }
+
+/* Délais manuels */
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+.delay-4 { transition-delay: 0.4s !important; }
+.delay-5 { transition-delay: 0.5s !important; }
+.delay-6 { transition-delay: 0.6s !important; }
+.delay-7 { transition-delay: 0.7s !important; }
+.delay-8 { transition-delay: 0.8s !important; }
+
+/* ============================================================
+   3. ANIMATIONS HERO (déclenchées au chargement)
+   ============================================================ */
+
+/* Badge hero */
+.hero-badge {
+  animation: fadeInDown 0.7s ease 0.2s both;
+}
+
+/* Titre hero */
+.hero-title {
+  animation: fadeInUp 0.8s ease 0.35s both;
+}
+
+/* Sous-titre (typing) */
+.hero-subtitle {
+  animation: fadeInUp 0.7s ease 0.5s both;
+}
+
+/* Description */
+.hero-description {
+  animation: fadeInUp 0.7s ease 0.65s both;
+}
+
+/* Boutons */
+.hero-actions {
+  animation: fadeInUp 0.7s ease 0.8s both;
+}
+
+/* Stats */
+.hero-stats {
+  animation: fadeInUp 0.6s ease 0.95s both;
+}
+
+/* Photo */
+.hero-photo-wrap {
+  animation: zoomFadeIn 1s ease 0.4s both;
+}
+
+/* Cartes flottantes */
+.hero-float-card-tl {
+  animation: fadeInLeft 0.8s ease 0.9s both, float 4s ease-in-out 1.8s infinite;
+}
+
+.hero-float-card-br {
+  animation: fadeInRight 0.8s ease 1.1s both, float 4.5s ease-in-out 2s infinite;
+}
+
+/* Scroll indicator */
+.hero-scroll {
+  animation: fadeIn 1s ease 1.5s both;
+}
+
+/* ============================================================
+   4. HOVER & MICRO-INTERACTIONS
+   ============================================================ */
+
+/* Bouton avec effet ripple au clic */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple .ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  margin-left: -5px;
+  animation: ripple 0.7s ease-out;
+  pointer-events: none;
+}
+
+/* Hover zoom compétences */
+.skill-icon {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
+}
+
+/* Hover color change skill card */
+.skill-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Project card zoom-in image au hover */
+.project-card-img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Nav hover underline expand */
+.navbar-links a::after {
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus form avec transition */
+.form-input,
+.form-textarea {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ============================================================
+   5. ANIMATIONS FORMULAIRE
+   ============================================================ */
+
+/* Erreur de champ */
+.form-input.error,
+.form-textarea.error {
+  border-color: #ef4444;
+  animation: shake 0.4s ease;
+}
+
+/* Envoi réussi — coche animée */
+.checkmark {
+  width: 20px;
+  height: 20px;
+  stroke: #16a34a;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: checkDraw 0.5s ease forwards;
+}
+
+/* Loader bouton d'envoi */
+.btn-loader {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,.4);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: loaderSpin 0.7s linear infinite;
+}
+
+/* ============================================================
+   6. LOADER PAGE (initial)
+   ============================================================ */
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--navy);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+
+.loader-logo span {
+  color: #c9a84c;
+}
+
+.loader-bar {
+  width: 120px;
+  height: 2px;
+  background: rgba(255,255,255,.15);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #c9a84c);
+  border-radius: 2px;
+  animation: loaderProgress 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes loaderProgress {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+.loader-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,.35);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   7. SCROLL PROGRESS BAR (haut de page)
+   ============================================================ */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  z-index: 9998;
+  width: 0%;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ============================================================
+   8. BACK TO TOP BUTTON
+   ============================================================ */
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  z-index: 500;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* ============================================================
+   9. EFFETS SPÉCIAUX SECTIONS
+   ============================================================ */
+
+/* Section projets — card reveal au scroll */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Grille compétences */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+}
+
+/* À propos — image reveal */
+.about-img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.about-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: translateX(0);
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.about-img-wrap.revealed::after {
+  transform: translateX(101%);
+}
+
+/* ============================================================
+   10. REDUCED MOTION (accessibilité)
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .anim-fade-up,
+  .anim-fade-left,
+  .anim-fade-right,
+  .anim-zoom {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .anim-cascade > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

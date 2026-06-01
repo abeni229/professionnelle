@@ -689,13 +689,12 @@ $pageDesc  = "Découvrez le parcours, la formation et la personnalité de Roukay
             Titulaire d'une <strong>Licence en Sciences Informatiques (SIL)</strong> validée
             par examen d'État en 2025, j'ai construit une expertise solide en développement
             web fullstack à travers ma formation, mon stage professionnel chez
-            <strong>SolDigit</strong> et mes projets personnels.
+            <strong>Sacim Digital Agency</strong> et mes projets personnels.
           </p>
 
           <p class="about-text">
             Ce qui me distingue ? Un profil résolument <strong>pluridisciplinaire</strong> :
-            je poursuis en parallèle une Licence en Chimie Fondamentale, ce qui forge en
-            moi une rigueur analytique rare. Je suis <strong>autonome, autodidacte</strong>
+            je  forge en moi une rigueur analytique rare. Je suis <strong>autonome, autodidacte</strong>
             et j'ai acquis Laravel de façon autonome directement en contexte professionnel.
           </p>
 
@@ -710,7 +709,7 @@ $pageDesc  = "Découvrez le parcours, la formation et la personnalité de Roukay
         <div class="about-traits anim-cascade">
 
           <div class="trait-card">
-            <span class="trait-emoji">⚡</span>
+       
             <div>
               <div class="trait-title">Autonomie</div>
               <div class="trait-desc">Capable d'apprendre et de livrer sans supervision constante.</div>
@@ -718,7 +717,7 @@ $pageDesc  = "Découvrez le parcours, la formation et la personnalité de Roukay
           </div>
 
           <div class="trait-card">
-            <span class="trait-emoji">🔬</span>
+            
             <div>
               <div class="trait-title">Rigueur</div>
               <div class="trait-desc">Esprit scientifique hérité de ma double formation.</div>
@@ -726,7 +725,7 @@ $pageDesc  = "Découvrez le parcours, la formation et la personnalité de Roukay
           </div>
 
           <div class="trait-card">
-            <span class="trait-emoji">🧩</span>
+            
             <div>
               <div class="trait-title">Esprit critique</div>
               <div class="trait-desc">J'analyse avant d'agir, je questionne les solutions.</div>
@@ -734,7 +733,7 @@ $pageDesc  = "Découvrez le parcours, la formation et la personnalité de Roukay
           </div>
 
           <div class="trait-card">
-            <span class="trait-emoji">📚</span>
+          
             <div>
               <div class="trait-title">Autodidacte</div>
               <div class="trait-desc">Laravel, Figma, Git — appris par moi-même en contexte réel.</div>
@@ -742,7 +741,7 @@ $pageDesc  = "Découvrez le parcours, la formation et la personnalité de Roukay
           </div>
 
           <div class="trait-card">
-            <span class="trait-emoji">🔄</span>
+            
             <div>
               <div class="trait-title">Adaptabilité</div>
               <div class="trait-desc">Je m'intègre vite à une équipe et à ses méthodologies.</div>
@@ -750,7 +749,7 @@ $pageDesc  = "Découvrez le parcours, la formation et la personnalité de Roukay
           </div>
 
           <div class="trait-card">
-            <span class="trait-emoji">💡</span>
+            
             <div>
               <div class="trait-title">Curiosité</div>
               <div class="trait-desc">Toujours à l'affût des nouvelles pratiques et technologies.</div>
@@ -863,10 +862,10 @@ $pageDesc  = "Découvrez le parcours, la formation et la personnalité de Roukay
       </div>
 
       <div class="achievement-card">
-        <div class="achievement-num" data-count="1">0</div>
-        <div class="achievement-title">An d'expérience professionnelle</div>
+        <div class="achievement-num" data-count="2">0</div>
+        <div class="achievement-title">2 ans d'expérience professionnelle</div>
         <div class="achievement-desc">
-          Stage chez SolDigit (2024–2025) avec développement en PHP,
+          Stage chez Sacim Digital Agency (mars–juin 2026) avec développement en PHP,
           Laravel et Bootstrap.
         </div>
       </div>

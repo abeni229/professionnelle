@@ -65,8 +65,8 @@ VALUES
 (
   'Comment j\'ai appris Laravel en autonomie pendant mon stage',
   'apprendre-laravel-autonomie-stage',
-  'Retour d\'expérience sur l\'apprentissage de Laravel sans formation préalable, directement en contexte professionnel chez SolDigit.',
-  '<p>Quand j\'ai débuté mon stage chez SolDigit en 2024, Laravel n\'était pas encore dans ma boîte à outils. Pourtant, l\'équipe travaillait exclusivement avec ce framework...</p><p>Voici comment j\'ai procédé pour maîtriser Laravel en quelques semaines...</p>',
+  'Retour d\'expérience sur l\'apprentissage de Laravel sans formation préalable, directement en contexte professionnel chez Sacom Digital Agency.',
+  '<p>Quand j\'ai débuté mon stage chez Sacom Digital Agency en 2026, Laravel n\'était pas encore dans ma boîte à outils. Pourtant, l\'équipe travaillait exclusivement avec ce framework...</p><p>Voici comment j\'ai procédé pour maîtriser Laravel en quelques semaines...</p>',
   'Retour d\'expérience',
   'Laravel,PHP,Stage,Apprentissage',
   'publié'
